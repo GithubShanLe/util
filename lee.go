@@ -1,7 +1,6 @@
-package main
+package util
 
 import (
-	"log"
 	"math"
 	"strconv"
 	"strings"
@@ -65,23 +64,24 @@ func GetIndexByte(b []byte) ([]byte, int) {
 	}
 	return b[0:max], max
 }
-func main() {
-	netmask := NetMaskSysConvert("fffff000")
-	log.Println(netmask)
 
-	var head []byte
-	h := "123"
-	k := []byte(h)
-	head = make([]byte, len(k)+2)
+// func main() {
+// 	netmask := NetMaskSysConvert("fffff000")
+// 	log.Println(netmask)
 
-	for i := 0; i < len(k); i++ {
-		head[i] = k[i]
-	}
-	log.Println(string(head))
+// 	var head []byte
+// 	h := "123"
+// 	k := []byte(h)
+// 	head = make([]byte, len(k)+2)
 
-	u, a := GetIndexByte(head)
-	o, _ := strconv.Atoi(string(u))
-	if o == 123 {
-		log.Println("hhh", a)
-	}
-}
+// 	for i := 0; i < len(k); i++ {
+// 		head[i] = k[i]
+// 	}
+// 	log.Println(string(head))
+
+// 	u, a := GetIndexByte(head)
+// 	o, _ := strconv.Atoi(string(u))
+// 	if o == 123 {
+// 		log.Println("hhh", a)
+// 	}
+// }
