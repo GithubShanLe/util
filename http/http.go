@@ -7,6 +7,13 @@ import (
 	"strings"
 )
 
+/*
+	@@HTTPMethod:是为golang写的code访问接口的方法
+	@@method :"PUT"|"GET"|"POST"|"DELETE"
+	@@url:接口URL
+	@@content: 提交body
+	@@headparameters... : 多个head参数
+*/
 func HttpMethod(method string, url string, content []byte, headparameters ...string) (string, error) {
 	if len(headparameters)%2 == 1 {
 		return "", errors.New("parameters error")
