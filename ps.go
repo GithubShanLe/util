@@ -69,6 +69,9 @@ func PsGrep(idIndex string) *int {
 		log.Println(err)
 		return nil
 	}
+	if intPsCOunt > 1 {
+
+	}
 	return &intPsCOunt
 
 }
